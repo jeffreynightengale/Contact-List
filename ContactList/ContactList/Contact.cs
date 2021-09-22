@@ -4,10 +4,10 @@ using System.Text;
 
 namespace ContactList
 {
-    class Contact
+    public class Contact
     {
         public int ID { get; set; }
-        public string First { get; set}
+        public string First { get; set; }
         public string Last { get; set; }
         public string Email { get; set; }
 
@@ -21,6 +21,11 @@ namespace ContactList
             Email = string.Empty;
             URL = string.Empty;
              
+        }
+
+        public override string ToString()
+        {
+            return $"{Last}, {First}";
         }
 
 
